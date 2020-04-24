@@ -1,6 +1,12 @@
 
 #wrapper-navbar{
+
+
+
     background:$dark;
+    .frontnav {
+        padding:0;
+    }
 	&.header-green {
 		background: $secondary !important;
     }
@@ -75,8 +81,9 @@
     a.nav-link {
             color:$white;
            
-         
-            font-weight:600;
+            padding-right: 1.5rem;
+            padding-left: 1.5rem;
+            font-weight:500;
     }
 }
 i {

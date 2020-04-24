@@ -7,13 +7,14 @@ $button_text = get_sub_field('button_text');
 
 <section id="slim_section" class="<?php echo $colour; ?>">
     <div class="container">
-        <div class="row">
-            <div class="col-sm-8 align-baseline">
+        <div class="row align-center">
+           
+        
+            
+            <div class="col-12 ">
             <h3><?php echo $text; ?></h3>
-            </div>
-            <div class="col-sm-4 ">
                 <a href="<?php echo $link;?>">
-                    <button class="float-right">
+                    <button>
                         <?php echo $button_text; ?>
                     </button>
                 </a>

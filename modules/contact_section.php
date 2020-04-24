@@ -8,17 +8,18 @@ $right = get_sub_field('right_side');
     <div class="container">
     <div class="row">
     <div class="col-12">
-    <h2><?php echo $heading; ?></h2>
-    </div>
-    </div>
-        <div class="row align-center">
+    <h1><?php echo $heading; ?></h1>
 
-            	<div class="col-md-6">
+    </div>
+    </div>
+        <div class="row ">
+
+            	<div class="col-md-7">
 				<div class="left-inner">
                 <?php echo $left; ?>
 				</div>
            		</div>
-				   <div class="col-md-6">
+				   <div class="col-md-5">
 				   <div class="form-inner">
                    <?php echo $right; ?>
 				</div>

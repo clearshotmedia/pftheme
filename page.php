@@ -18,7 +18,9 @@ if($headertype == 'green'){
     get_header('green');
 } elseif($headertype == 'red'){
     get_header('red');
-} else get_header();
+} elseif($headertype == 'grey'){
+    get_header('grey');
+}else get_header();
 
 
 ?>

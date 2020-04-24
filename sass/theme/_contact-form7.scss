@@ -47,20 +47,43 @@
   }
 
   .wpcf7-form {
-    padding: 2rem 1rem;
-    background: $light-grey;
+    padding:  1rem;
+    .btn-outline-primary, .wpcf7 input[type=submit] {
+      background:none;
+	border: 2px solid $white;
+	border-radius:0px;
+	max-width:48%;
+
+	font-size: $font-size-base;
+	text-transform:uppercase;
+	color:$white;
+	font-weight:700;
+	transition: all 0.3s ease 0s;
+	&:hover {
+		background:$primary;
+	border: 2px solid $primary;
+	}
+  }
     // set paragraphs to behave like divs with class .form-group
     p {
       @extend .form-group;
+      text-align:left;
     }
 
     // let labels be 100%
     label {
       width: 100%;
       text-align:left;
-      font-weight:300;
+      font-weight:500;
       font-size:rem(13);
       
+    }
+
+    .form-wrapper-dark {
+       input[type=submit] {
+        color:$primary !important;
+        border: 2px solid $primary;
+      }
     }
   }
 

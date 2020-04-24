@@ -1,4 +1,11 @@
 #slim_section {
     color:$white;
+    h3 {
+       padding: .25em 0em;
+       display:inline-block;
+    }
+    button {
+        margin-left:4rem;
+    }
     
 }
