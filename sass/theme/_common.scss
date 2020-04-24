@@ -82,7 +82,15 @@ hr {
 .red {
     background-color:$primary !important;
 }
-
+.red-demi {
+    background-color:rgba(227, 6, 19, 0.7) !important;
+}
+.grey-demi {
+    background-color:rgba(227, 6, 19, 0.7) !important;
+}
+.green-demi {
+    background-color:rgba(190, 214, 47, 0.7) !important;
+}
 button {
 	background:none;
 	border: 2px solid $white;
@@ -131,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, .h1 {
 	font-family: $headings-font-family;
-	font-size: rem(80);
+	font-size: rem(60);
 	line-height: 1em;
 	margin:20px 0;
 	@media screen and (max-width:$screen-md-max) {

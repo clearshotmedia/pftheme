@@ -47,7 +47,8 @@
   }
 
   .wpcf7-form {
-
+    padding: 2rem 1rem;
+    background: $light-grey;
     // set paragraphs to behave like divs with class .form-group
     p {
       @extend .form-group;
@@ -56,18 +57,22 @@
     // let labels be 100%
     label {
       width: 100%;
+      text-align:left;
+      font-weight:300;
+      font-size:rem(13);
+      
     }
   }
 
   // not valid tip for each control
   .wpcf7-not-valid-tip {
-    color: theme-color("danger");
+    color: theme-color("primary");
   }
 
   // validation errors ourput bottom of form
   .wpcf7-validation-errors {
     @extend .form-control;
-    color: theme-color("danger");
+    color: theme-color("primary");
     border: 1px solid $gray-200;
   }
 }
