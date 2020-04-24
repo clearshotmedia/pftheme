@@ -1,0 +1,30 @@
+#three_buttons {
+    padding: 3rem 0;
+    .big-button {
+        overflow:hidden;
+        img {
+            width:100%;
+            max-height: 250px;
+        }
+        .button-inner{
+            border:1px solid $black;
+        }
+        .button-bottom {
+            padding:7px 0;
+            &.green {
+                background:$secondary;
+            }
+            &.grey {
+                background:$grey;
+            }
+            &.red {
+                background:$primary;
+            }
+            h4 {
+                color:$white;
+                font-weight:300;
+            }
+        }
+    }
+
+}
