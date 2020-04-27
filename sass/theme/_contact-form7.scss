@@ -44,6 +44,10 @@
   input[type=submit] {
     @extend .btn;
    
+    &:hover {
+        background: $white;
+        color:$primary;
+   }
   }
 
   .wpcf7-form {
