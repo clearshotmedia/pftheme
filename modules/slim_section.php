@@ -12,7 +12,7 @@ $button_text = get_sub_field('button_text');
         
             
             <div class="col-12 ">
-            <h3><?php echo $text; ?></h3>
+            <h5><?php echo $text; ?></h5>
                 <a href="<?php echo $link;?>">
                     <button>
                         <?php echo $button_text; ?>

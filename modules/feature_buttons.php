@@ -16,18 +16,18 @@ $button = get_sub_field('button');
             </div>
             
         </div>
-        <div class="row ">
+        <div class="row no-gutters">
           
             <?php while ( have_rows('button') ) : the_row();?>
-            <div class="col-md-4"> 
+            <div class="col-md-4 px-2 mb-3"> 
             <div class="button-inner">
                     <a href="<?php the_sub_field('button_link');?>">
-                    <div class="content-overlay"></div>
+                    <div class="content-overlay <?php echo $colour; ?>"></div>
                     <img class="content-image" src="<?php the_sub_field('button_image');?>">
 
-                    <div class="content-details fadeIn-top">
+                    <div class="content-details fadeIn-top <?php echo $colour; ?>">
 
-        <h3><?php echo the_sub_field('button_heading'); ?></h3>
+        <h5><?php echo the_sub_field('button_heading'); ?></h5>
        
       </div>
                     </a>

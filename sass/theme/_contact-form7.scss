@@ -43,27 +43,12 @@
   // submit button, inherit .btn and .btn-outline-primary classes.
   input[type=submit] {
     @extend .btn;
-    @extend .btn-outline-primary;
+   
   }
 
   .wpcf7-form {
     padding:  1rem;
-    .btn-outline-primary, .wpcf7 input[type=submit] {
-      background:none;
-	border: 2px solid $white;
-	border-radius:0px;
-	max-width:48%;
-
-	font-size: $font-size-base;
-	text-transform:uppercase;
-	color:$white;
-	font-weight:700;
-	transition: all 0.3s ease 0s;
-	&:hover {
-		background:$primary;
-	border: 2px solid $primary;
-	}
-  }
+   
     // set paragraphs to behave like divs with class .form-group
     p {
       @extend .form-group;
@@ -80,9 +65,21 @@
     }
 
     .form-wrapper-dark {
+     
        input[type=submit] {
-        color:$primary !important;
-        border: 2px solid $primary;
+       
+        &.secondary-button {
+          color:$white;
+          border:none;
+          background: rgb(172,12,22);
+        background: linear-gradient(0deg, rgba(172,12,22,1) 0%, rgba(227,6,19,1) 33%, rgba(227,6,19,1) 53%);
+          
+          &:hover {
+            background:none;
+            border: 2px solid $primary;
+            color:$primary;
+          }
+        }
       }
     }
   }

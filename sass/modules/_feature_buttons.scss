@@ -1,11 +1,12 @@
 #feature_buttons {
+  padding: 4rem 0;
     .button-inner {
         position: relative;
         margin: auto;
         overflow: hidden;
 
         .content-overlay {
-            background: rgba(227,6,19,0.7);
+            
             position: absolute;
             height: 99%;
             width: 100%;
@@ -17,6 +18,16 @@
             -webkit-transition: all 0.4s ease-in-out 0s;
             -moz-transition: all 0.4s ease-in-out 0s;
             transition: all 0.4s ease-in-out 0s;
+
+            &.red-demi {
+              background: rgba(227,6,19,0.6);
+            }
+            &.green-demi {
+              background: rgba(190, 214, 47, 0.6);
+            }
+            &.grey-demi {
+              background: rgba(83, 102, 108, 0.6);
+            }
         }
     }
 
@@ -25,7 +36,7 @@
       }
       .content-image{
         max-height: 330px;
-         width: auto;
+         width: 100%;
 
       }
       .content-details {
@@ -60,7 +71,15 @@
       
       .fadeIn-top{
         top:9%;
-        background: rgba(227,6,19,0.7);
+        &.red-demi {
+          background:$primary;
+        }
+        &.green-demi {
+          background: rgba(190, 214, 47, 0.6);
+        }
+        &.grey-demi {
+          background:$grey;
+        }
       } 
 
 
