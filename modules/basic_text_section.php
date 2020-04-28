@@ -10,7 +10,7 @@ $button_text = get_sub_field('button_text');
     <div class="container align-center">
     <div class="row">
             <div class="col-12 ">
-            <h2><?php echo $heading; ?></h2>
+            <h1><?php echo $heading; ?></h1>
             <hr>
             </div>
             

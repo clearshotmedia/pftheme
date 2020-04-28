@@ -10,7 +10,6 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-$container = get_theme_mod( 'pf_container_type' );
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -26,7 +25,7 @@ $container = get_theme_mod( 'pf_container_type' );
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar" class=" sticky-top " itemscope itemtype="http://schema.org/WebSite">
+	<div id="wrapper-navbar" class="header-red sticky-top " itemscope itemtype="http://schema.org/WebSite">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'tdcc' ); ?></a>
 

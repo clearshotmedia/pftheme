@@ -11,7 +11,15 @@
 * .wpcf7-textarea
 * .wpcf7-submit
 */
+.form-inner {
 
+    .wpcf7 {
+      background: #f5f5f5;
+      border-width: 0.5px;
+      border-style: solid;
+      color: #cccccc;
+    }
+}
 // keep a max width in case it is just the form and nothing else
 // we do not want a form spanning whole page
 .wpcf7 {

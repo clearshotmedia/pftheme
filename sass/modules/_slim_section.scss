@@ -2,6 +2,14 @@
     color:$white;
     padding: 1rem 0;
     margin:2rem 0;
+
+    &.green {
+        color:$dark;
+        button {
+            color:$dark;
+            border-color:$dark;
+        }
+    }
     h5 {
        padding: .25em 0em;
        display:inline-block;

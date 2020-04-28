@@ -10,7 +10,7 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-$container = get_theme_mod( 'pf_container_type' );
+
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -26,17 +26,36 @@ $container = get_theme_mod( 'pf_container_type' );
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar" class="header-green sticky-top " itemscope itemtype="http://schema.org/WebSite">
+	<div id="wrapper-navbar" class=" sticky-top " itemscope itemtype="http://schema.org/WebSite">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'tdcc' ); ?></a>
 
-		<nav class="navbar  navbar-expand-md ">
+		<nav class="navbar frontnav  navbar-expand-md ">
 
 		
 			<div class="container">
-			<a href="#" class="navbar-brand custom-logo-link">
-					<img src="<?php the_field('green_header_logo', 'option'); ?>" class="img-fluid"></a>
-			
+	
+
+
+					<?php if ( ! has_custom_logo() ) { ?>
+
+						<?php if ( is_front_page() && is_home() ) : ?>
+
+							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
+
+						<?php else : ?>
+
+							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+
+						<?php endif; ?>
+
+
+					<?php } else {
+
+						 if ( !is_front_page() ) {
+						the_custom_logo();
+						 }
+					} ?><!-- end custom logo -->
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'tdcc' ); ?>">
 					<span class="navbar-toggler-icon"></span>

@@ -2,7 +2,7 @@
 	background:$dark;
 	text-align:center;
 	color:$light-grey;
-	font-weight:300;
+	font-weight:500;
 
 
 	.widget_nav_menu {
@@ -13,6 +13,12 @@
 			display: inline;
 			li {
 				display:inline;
+				&::after {
+					content:' - ';
+				}
+				&:last-child::after {
+					content: '';
+				}
 				a {
 					color:$light-grey;
 				}

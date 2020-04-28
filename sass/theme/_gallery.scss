@@ -1,0 +1,32 @@
+
+/* ---- isotope ---- */
+
+.filter-group {
+    text-align:center;
+    button {
+        color:$red;
+        text-transform:unset;
+        padding: 2px 20px;
+        font-size: rem(14);
+    }
+}
+
+.grid {
+  
+   
+  .gallery-item {
+    position: relative;
+    float: left;
+    width: auto;
+    margin: 5px;
+    padding: 10px;
+    background: #888;
+    color: #262524;
+    img {
+        max-width:400px;
+    }
+}
+}
+
+
+

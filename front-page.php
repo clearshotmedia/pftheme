@@ -7,12 +7,7 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-$headertype = get_field('header_type');
-if($headertype == 'green'){
-    get_header('green');
-} elseif($headertype == 'red'){
-    get_header('red');
-} else get_header();
+ get_header('front');
 
 ?>
 

@@ -29,3 +29,33 @@ $understrap_includes = array(
 foreach ( $understrap_includes as $file ) {
 	require_once get_template_directory() . '/inc' . $file;
 }
+
+define( 'MY_ACF_PATH', get_stylesheet_directory() . '/inc/acf/' );
+define( 'MY_ACF_URL', get_stylesheet_directory_uri() . '/inc/acf/' );
+
+// Include the ACF plugin.
+include_once( MY_ACF_PATH . 'acf.php' );
+include_once( MY_ACF_PATH . 'pro/acf-pro.php' );
+add_filter('acf/settings/url', 'my_acf_settings_url');
+		function my_acf_settings_url( $url ) {
+			return MY_ACF_URL;
+		}
+
+if( function_exists('acf_add_options_page') ) {
+	$arg = acf_add_options_page(array(
+		'page_title' 	=> 'Gallery Settings',
+		'menu_title'	=> 'Gallery Settings',
+		'menu_slug' 	=> 'theme-general-options',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+}
+if( function_exists('acf_add_options_page') ) {
+	$arg = acf_add_options_page(array(
+		'page_title' 	=> 'Header Settings',
+		'menu_title'	=> 'Header Settings',
+		'menu_slug' 	=> 'header-options',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+}

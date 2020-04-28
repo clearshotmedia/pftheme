@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Left Sidebar Layout
+ * Template Name: Regular Page 
  *
  * This template can be used to override the default template and sidebar setup
  *
@@ -11,20 +11,16 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
-$container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <div class="wrapper" id="page-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content">
+	<div id="content">
 
-		<div class="row">
+		
 
-			<?php get_template_part( 'sidebar-templates/sidebar', 'left' ); ?>
-
-			<div
-				class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area"
-				id="primary">
+		
+			<div class=" content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
 
@@ -32,12 +28,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
-						<?php
-						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) :
-							comments_template();
-						endif;
-						?>
+						
 
 					<?php endwhile; // end of the loop. ?>
 
@@ -45,7 +36,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			</div><!-- #primary -->
 
-		</div><!-- .row -->
+		
 
 	</div><!-- #content -->
 
