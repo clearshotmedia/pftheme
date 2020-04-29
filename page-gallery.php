@@ -24,72 +24,68 @@ if($headertype == 'green'){
 
 
 ?>
+<div class="container">
+<div class="row">
+<div class="col-12">
+	<header class="entry-header">
 
-<div class="wrapper" id="page-wrapper">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-
-
-
-			
-
-			<main class="site-main" id="main">
-
-            
-<div id="filters" class="filter-group">  <button class="filter is-checked" data-filter="*">All Projects</button>
-  <button class="filter" data-filter=".residential">Residential</button>
-  <button class="filter" data-filter=".commerical">Commercial</button>
-  <button class="filter" data-filter=".alkali, .alkaline-earth">add more</button>
-  
+	</header><!-- .entry-header -->
 </div>
-
-
-            <?php
-
-$gall = get_field('gallery_item', 'option');
-
-// do something with $variable
-
-?>
-			<?php
-
-if( have_rows('gallery_item', 'option') ):
-?> 
+</div>
+</div>
+<div class="wrapper gallery" id="page-wrapper">
 <div class="container">
     <div class="row">
-        <div class="col-12">
-        <div class="grid">
-<?php
-    // loop through the rows of data
-   while ( have_rows('gallery_item', 'option') ) : the_row();
-
-       // display a sub field value
-       ?>
-      <div class="gallery-item <?php echo the_sub_field('image_tag'); ?>"> <img src="<?php echo the_sub_field('image'); ?>"> </div>
-<?php
-   endwhile;
-
-else :
-
-   // no rows found
-
-endif;
-
-
-?>
-</div>
+    <div class="col-12">
+    <div id="filters" class="filter-group">  <button class="filter is-checked" data-filter="*">All Projects</button>
+            <button class="filter" data-filter=".residential">Residential</button>
+            <button class="filter" data-filter=".commerical">Commercial Projects</button>
+            <button class="filter" data-filter=".community">Community Living</button>
+            <button class="filter" data-filter=".lifestyle">Lifestyle Resort</button>
+            <button class="filter" data-filter=".project">Project Builds</button>
+            <button class="filter" data-filter=".bespoke">Custom/Bespoke Builds</button>
+            </div>
         </div>
     </div>
-
+    <div class="row">
+    <div class="col-md-6 offset-md-3">
+            <?php while ( have_posts() ) : the_post(); ?>
+              <?php echo the_content(); ?>
+            <?php endwhile; // end of the loop. ?>
+    </div>
+    </div>
 </div>
 
+<div class="container-fluid">
+
+         
 
 
-
-
-
-
-			</main><!-- #main -->
-
+            <?php $gall = get_field('gallery_item', 'option'); 
+			 if( have_rows('gallery_item', 'option') ): ?> 
+            
+                <div class="row">
+                    <div class="col-12">
+                    <div class="grid">
+            <?php while ( have_rows('gallery_item', 'option') ) : the_row(); ?>
+            
+                <div class="gallery-item <?php echo the_sub_field('image_tag'); ?>"> 
+                     <img src="<?php echo the_sub_field('image'); ?>"> 
+               
+            </div>
+            <?php
+                endwhile;
+                else :
+                  // no rows found
+                endif;
+                ?>
+            </div>
+        </div>
+    </div>
+		
+            </div>
 			
 
 

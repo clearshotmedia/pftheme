@@ -5,6 +5,10 @@ jQuery( document ).ready( function( $ ) {
 var $grid = $('.grid').isotope({
     itemSelector: '.gallery-item',
     layoutMode: 'masonry',
+    masonry: {
+      columnWidth: 10,
+      gutter: 10
+    },
     getSortData: {
       name: '.name',
       symbol: '.symbol',

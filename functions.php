@@ -59,3 +59,39 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'		=> false
 	));
 }
+
+function acf_load_color_field_choices( $field ) {
+    
+    // reset choices
+    $field['choices'] = array();
+
+
+    // if has rows
+    if( have_rows('project_categories', 'option') ) {
+        
+        // while has rows
+        while( have_rows('project_categories', 'option') ) {
+            
+            // instantiate row
+            the_row();
+            
+            
+            // vars
+            $value = get_sub_field('category_name');
+            $label = get_sub_field('category_label');
+
+            
+            // append to choices
+            $field['choices'][ $value ] = $label;
+            
+        }
+        
+    }
+
+
+    // return the field
+    return $field;
+    
+}
+
+add_filter('acf/load_field/name=image_tag', 'acf_load_color_field_choices');

@@ -1,8 +1,9 @@
 
-/* ---- isotope ---- */
-
+.gallery {
+        min-height:100vh;
 .filter-group {
     text-align:center;
+    padding: 20px 0;
     button {
         color:$red;
         text-transform:unset;
@@ -17,16 +18,19 @@
   .gallery-item {
     position: relative;
     float: left;
-    width: auto;
-    margin: 5px;
-    padding: 10px;
-    background: #888;
+    width: 32%;
+    height:auto;
+    margin-bottom:15px;
+    
+   
     color: #262524;
     img {
-        max-width:400px;
+        width:100%;
     }
 }
 }
 
 
+
+}
 
