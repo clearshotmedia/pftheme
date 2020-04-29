@@ -34,12 +34,14 @@ $container = get_theme_mod( 'pf_container_type' );
 
 		
 			<div class="container">
+			
 			<a href="#" class="navbar-brand custom-logo-link">
 					<img src="<?php the_field('green_header_logo', 'option'); ?>" class="img-fluid"></a>
 			
+			
 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'tdcc' ); ?>">
-					<span class="navbar-toggler-icon"></span>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'pftheme' ); ?>">
+				<i class="fa fa-bars"></i>
 				</button>
 
 						<div class="ffgg">
@@ -57,8 +59,8 @@ $container = get_theme_mod( 'pf_container_type' );
 				); ?>
 </div>
 
-			
-
+				
+				
 			</div><!-- .container -->
 			
 

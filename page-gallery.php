@@ -71,9 +71,16 @@ if($headertype == 'green'){
                     <div class="grid">
             <?php while ( have_rows('gallery_item', 'option') ) : the_row(); ?>
             
-                <div class="gallery-item <?php echo the_sub_field('image_tag'); ?>"> 
+                <div class="gallery-item <?php echo the_sub_field('image_tag'); ?>"> <div class="button-inner">
+                <a href="<?php the_sub_field('image_link');?>">
+                <div class="content-overlay <?php echo $colour; ?>"></div>
                      <img src="<?php echo the_sub_field('image'); ?>"> 
-               
+                     <div class="content-details fadeIn-top">
+
+        <h5><?php echo the_sub_field('image_tag'); ?></h5>
+       
+      </div> </a>
+               </div>
             </div>
             <?php
                 endwhile;

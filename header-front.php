@@ -58,7 +58,8 @@ defined( 'ABSPATH' ) || exit;
 					} ?><!-- end custom logo -->
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'tdcc' ); ?>">
-					<span class="navbar-toggler-icon"></span>
+					
+					<i class="fa fa-bars"></i>
 				</button>
 
 						<div class="ffgg">

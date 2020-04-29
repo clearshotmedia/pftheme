@@ -39,8 +39,8 @@ $container = get_theme_mod( 'pf_container_type' );
 					<img src="<?php the_field('grey_header_logo', 'option'); ?>" class="img-fluid"></a>
 			
 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'tdcc' ); ?>">
-					<span class="navbar-toggler-icon"></span>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'projectfloors' ); ?>">
+				<i class="fa fa-bars"></i>
 				</button>
 
 						<div class="ffgg">

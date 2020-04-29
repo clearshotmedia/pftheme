@@ -24,6 +24,7 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 
 		wp_enqueue_script( 'jquery' );
 		$js_version = $theme_version . '.' . filemtime( get_template_directory() . '/js/theme.min.js' );
+		wp_enqueue_script( 'imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array(), $js_version, true );
 		wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array(), $js_version, true );
 
 		

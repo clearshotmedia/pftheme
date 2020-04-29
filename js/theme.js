@@ -7157,23 +7157,25 @@
 // external js: isotope.pkgd.js
 jQuery(document).ready(function ($) {
   // init Isotope
-  var $grid = $('.grid').isotope({
-    itemSelector: '.gallery-item',
-    layoutMode: 'masonry',
-    masonry: {
-      columnWidth: 10,
-      gutter: 10
-    },
-    getSortData: {
-      name: '.name',
-      symbol: '.symbol',
-      number: '.number parseInt',
-      category: '[data-category]',
-      weight: function (itemElem) {
-        var weight = $(itemElem).find('.weight').text();
-        return parseFloat(weight.replace(/[\(\)]/g, ''));
+  var $grid = $('.grid').imagesLoaded(function () {
+    $grid.isotope({
+      itemSelector: '.gallery-item',
+      layoutMode: 'masonry',
+      masonry: {
+        columnWidth: 10,
+        gutter: 10
+      },
+      getSortData: {
+        name: '.name',
+        symbol: '.symbol',
+        number: '.number parseInt',
+        category: '[data-category]',
+        weight: function (itemElem) {
+          var weight = $(itemElem).find('.weight').text();
+          return parseFloat(weight.replace(/[\(\)]/g, ''));
+        }
       }
-    }
+    });
   }); // filter functions
 
   var filterFns = {

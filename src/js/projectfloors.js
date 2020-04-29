@@ -2,7 +2,9 @@
 
 jQuery( document ).ready( function( $ ) {
 // init Isotope
-var $grid = $('.grid').isotope({
+
+var $grid = $('.grid').imagesLoaded( function() {
+ $grid.isotope({
     itemSelector: '.gallery-item',
     layoutMode: 'masonry',
     masonry: {
@@ -20,6 +22,8 @@ var $grid = $('.grid').isotope({
       }
     }
   });
+});
+ 
   
   // filter functions
   var filterFns = {
