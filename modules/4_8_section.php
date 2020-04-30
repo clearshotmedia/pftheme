@@ -6,7 +6,7 @@ $left = get_sub_field('left_side');
 $right = get_sub_field('right_side');
 ?>
 
-<section id="8_4_section" class="section-layout">
+<section id="4_8_section" class="section-layout">
     <div class="container">
 
     <?php if ( $heading ) {?>
@@ -19,13 +19,12 @@ $right = get_sub_field('right_side');
     <?php } ?>
         <div class="row ">
 
-            	<div class="col-md-8">
+            	<div class="col-md-4">
 				<div class="section-inner">
                 <?php echo $left; ?>
 				</div>
            		</div>
-                 
-				   <div class="col-md-4">
+				   <div class="col-md-8">
                    <div class="section-inner">
                    <?php echo $right; ?>
         </div>
