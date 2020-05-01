@@ -10,23 +10,82 @@
             background: none;
             color: #fff;
             border: none;
-            padding: .25rem 1rem;
+            padding:  1rem;
+            position:absolute;
+            right:0;
         }
     }
 
     background:$dark;
     .frontnav {
         padding:0;
+        .menu-nav a.nav-link {
+            line-height:unset;
+        }
+        #main-menu {
+           
+              .menu-item-has-children:hover {
+                  ul {
+                     
+                      top: 31px;
+                      &:hover {
+                          display: block;
+                      }
+                      li {
+                        
+                          background:$dark;
+                        
+                       //   line-height: 36px;
+                          
+                       
+                      }
+                  }
+              }
+                  a {
+                      &:hover {
+                          text-decoration: none;			
+                      }
+                  }
+      }
+
+        
     }
 	&.header-green {
-		background: $secondary !important;
+        background: $secondary !important;
+        
+            .navbar .ffgg #main-menu li ul li {
+                background: $secondary !important;
+            }
+        
     }
     &.header-red {
-		background: $primary !important;
+        background: $primary !important;
+        .navbar .ffgg #main-menu li ul li {
+            background: $primary !important;
+        }
+    }
+    &.grey {
+      
+        .navbar .ffgg #main-menu li ul li {
+            background: $grey !important;
+        }
+    }
+
+    .phone-section {
+        padding:1rem;
+        @media screen and (max-width:$screen-md-max) {
+            position:absolute;
+            padding:3px 1rem 0 1rem;
+            right:50px;
+        }
+        .phone-inner {
+
+        }
     }
     .ffgg{
         width: 100%;
         float: right;
+
 
 
         @media screen and (max-width:$screen-md-max) {
@@ -62,7 +121,7 @@
         border-radius: 0;
         li {
             padding:.5rem 0;
-            background:$dark;
+          
         }
     }
     .menu-item {
@@ -71,15 +130,15 @@
             width: 100%;
             padding: .25rem 1.5rem;
             clear: both;
-            font-size: rem(11);
-            font-weight:600;
-            color:$white;
+           // font-size: rem(11);
+           
+           // color:$white;
             text-align: inherit;
             white-space: nowrap;
             border-radius:0;
             margin:0;
              &:focus, &:hover {
-                color: $primary;
+                
                 text-decoration: none;
                 background-color: inherit;
             }
@@ -100,6 +159,7 @@
             padding-right: 1.5rem;
             padding-left: 1.5rem;
             font-weight:300;
+            line-height:50px;
             @media screen and (max-width:$screen-md-max) {
                 color:$dark;
             padding-right: 0;
@@ -112,5 +172,32 @@ i {
     color:$white;
    
 }
-
+#main-menu {
+		  li ul {
+					display: none;
+				}
+			.menu-item-has-children:hover {
+				ul {
+					display: block;
+					position: absolute;
+					padding:0;
+					top: 51px;
+					&:hover {
+						display: block;
+					}
+					li {
+						list-style:none;
+						width:100%;
+						line-height: 36px;
+						
+						a {color: $white;}
+					}
+				}
+			}
+				a {
+					&:hover {
+						text-decoration: none;			
+					}
+				}
+	}
 }

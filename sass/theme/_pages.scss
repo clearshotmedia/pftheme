@@ -1,0 +1,18 @@
+.entry-header {
+        .title-wrapper {
+            height:300px;
+            display: table;
+            text-align: center;
+            width: 100%;
+            
+            .entry-title {
+                display:table-cell;
+                text-transform: uppercase;
+                color:$white;
+        }
+        }
+    
+}
+.content-wrapper {
+    padding:2rem 0;
+}

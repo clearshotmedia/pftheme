@@ -76,7 +76,12 @@ defined( 'ABSPATH' ) || exit;
 					)
 				); ?>
 </div>
-
+<div class="phone-section">
+				<div class="phone-inner">
+				<a href="tel:<?php echo the_field('header_phone_number', 'option'); ?>">
+				<i class="fa fa-phone"></i></a>
+				</div>
+</div>
 			
 
 			</div><!-- .container -->

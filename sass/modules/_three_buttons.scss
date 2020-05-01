@@ -13,6 +13,12 @@
         }
         .button-bottom {
             padding:7px 0;
+            display:inline-block;
+            width:100%;
+            img {
+                max-width: 40px;
+                display:inline-block;
+            }
             &.green {
                 background:$secondary;
             }
@@ -25,6 +31,7 @@
             h4 {
                 color:$white;
                 font-weight:300;
+                display: inline-block;
             }
         }
     }

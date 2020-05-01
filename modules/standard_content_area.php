@@ -1,10 +1,10 @@
 <?php
 
 $content_section = get_sub_field('content_section');
-
+$background = get_sub_field('background_image');
 ?>
 
-<section id="content-section" style="background-image: url(/wp-content/uploads/2020/04/300x300mm.jpg);background-position: 100% 100%;">
+<section id="content-section" style="background-image: url(<?php echo $background; ?>);background-position: 100% 100%;">
     <div class="container">
         <div class="row ">
             <div class="col-12">

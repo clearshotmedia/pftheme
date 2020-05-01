@@ -15,6 +15,8 @@ $button3 = get_sub_field('button_3');
 					
 					<img src="<?php echo $button1['button_image'];?>" alt="" class="img-responsive">
 					<div class="button-bottom <?php echo $button1['button_colour'];?>">
+					
+					<img src="<?php echo $button1['button_logo']; ?>">
 						<h4><?php echo $button1['button_text']; ?></h4>
 					</div>
 					</a></div>
@@ -25,6 +27,7 @@ $button3 = get_sub_field('button_3');
 					
 					<img src="<?php echo $button2['button_image'];?>" alt="" class="img-responsive">
 					<div class="button-bottom <?php echo $button2['button_colour'];?>">
+					<img src="<?php echo $button1['button_logo']; ?>">
 						<h4><?php echo $button2['button_text']; ?></h4>
 					</div>
 					</a></div>
@@ -35,6 +38,7 @@ $button3 = get_sub_field('button_3');
 				
 					<img src="<?php echo $button3['button_image'];?>" alt="" class="img-responsive">
 					<div class="button-bottom <?php echo $button3['button_colour'];?>" >
+					<img src="<?php echo $button1['button_logo']; ?>">
 						<h4><?php echo $button3['button_text']; ?></h4>
 					</div>
 					</a></div>

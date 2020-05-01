@@ -1,0 +1,24 @@
+section#full_width_image_slider {
+    padding:0 0;
+    .carousel{
+        .carousel-inner {
+            display:flex;
+            &.thin {
+                    max-height:30vh;
+            }
+            &.medium {
+                max-height:55vh;
+        }
+        &.thin {
+            max-height:90vh;
+    }
+
+    .middle {
+        display: flex;
+flex-direction: column;
+justify-content: center;
+    }
+        }
+    }
+    
+}

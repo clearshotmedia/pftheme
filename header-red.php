@@ -10,7 +10,7 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-$container = get_theme_mod( 'pf_container_type' );
+
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -57,7 +57,12 @@ $container = get_theme_mod( 'pf_container_type' );
 					)
 				); ?>
 </div>
-
+<div class="phone-section">
+				<div class="phone-inner">
+				<a href="tel:<?php echo the_field('header_phone_number', 'option'); ?>">
+				<i class="fa fa-phone"></i></a>
+				</div>
+</div>
 			
 
 			</div><!-- .container -->
