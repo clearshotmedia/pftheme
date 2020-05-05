@@ -63,7 +63,7 @@ defined( 'ABSPATH' ) || exit;
 				<i class="fa fa-phone"></i></a>
 				</div>
 </div>
-			
+<a href="<?php echo the_field('instagram', 'option'); ?>"><i class="fa fa-instagram"></i></a>	<a href="<?php echo the_field('facebook', 'option'); ?>"><i class="fa fa-facebook-f"></i></a>		
 
 			</div><!-- .container -->
 			

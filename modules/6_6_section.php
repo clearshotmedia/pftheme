@@ -21,7 +21,16 @@ $right = get_sub_field('right_side');
 
             	<div class="col-md-6">
 				<div class="section-inner">
-                <?php echo $left; ?>
+                <?php
+
+while(have_rows('left_side')) {
+	the_row();
+
+	pf_theme_partial('/modules/'.get_row_layout().'.php');
+}
+
+?>
+
 				</div>
            		</div>
 				   <div class="col-md-6">

@@ -20,10 +20,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="<?php echo esc_attr( $container ); ?>" id="footer-full-content" tabindex="-1">
 
-			<div class="row">
+			<div class="row align-center">
 
 				<?php dynamic_sidebar( 'footerfull' ); ?>
 
+				<div class="col-12 align-center py-2">
+				<a href="<?php echo the_field('facebook', 'option'); ?>"><img src="/wp-content/uploads/2020/05/facebook.png"></a>
+<a href="<?php echo the_field('instagram', 'option'); ?>"><img src="/wp-content/uploads/2020/05/instagram.png"></a> </div>
 			</div>
 
 		</div>

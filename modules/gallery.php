@@ -1,40 +1,16 @@
-<?php
-/**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * @package understrap
- */
-
-// Exit if accessed directly.
-defined( 'ABSPATH' ) || exit;
-
-$headertype = get_field('header_type');
-if($headertype == 'green'){
-    get_header('green');
-} elseif($headertype == 'red'){
-    get_header('red');
-} elseif($headertype == 'grey'){
-    get_header('grey');
-}else get_header();
-
-
+<?php 
+$heading = get_sub_field('gallery_heading');
 ?>
-			<?php
+<section id="gallery" class="gallery">
 
-while(have_rows('module')) {
-	the_row();
-
-	pf_theme_partial('/modules/'.get_row_layout().'.php');
-}
-
-?>
-<div class="wrapper gallery" id="page-wrapper">
 <div class="container">
+    <div class="row align-center">
+        <div class="col-12">
+                <h2> <?php echo $heading; ?></h2>
+                <hr class="primary">
+        </div>
+    </div>
+
     <div class="row">
     <div class="col-12">
     <div id="filters" class="filter-group">  <button class="filter is-checked" data-filter="*">All Projects</button>
@@ -47,33 +23,26 @@ while(have_rows('module')) {
             </div>
         </div>
     </div>
-    <div class="row">
-    <div class="col-md-6 offset-md-3">
-            <?php while ( have_posts() ) : the_post(); ?>
-              <?php echo the_content(); ?>
-            <?php endwhile; // end of the loop. ?>
-    </div>
-    </div>
 </div>
+    <div class=""container-fluid">
+        <div class="row">
+            <div class="col-12">
+            
+            
 
-<div class="container-fluid">
-
-         
-
-
-            <?php $gall = get_field('gallery_item', 'option'); 
-			 if( have_rows('gallery_item', 'option') ): ?> 
+            <?php $gall = get_field('gallery_item'); 
+			 if( have_rows('gallery_item') ): ?> 
                 <div class="row">
                     <div class="col-12">
                     <div class="grid">
-            <?php while ( have_rows('gallery_item', 'option') ) : the_row(); ?>
+            <?php while ( have_rows('gallery_item') ) : the_row(); ?>
             <?php $post_object = get_sub_field('post_link'); 
                     if( $post_object ):
                         // override $post
                         $post = $post_object;
                         setup_postdata( $post ); 
             ?>
-                <div class="gallery-item <?php echo the_sub_field('image_tag'); ?>"> <div class="button-inner">
+                <div class="gallery-item five <?php echo the_sub_field('image_tag'); ?>"> <div class="button-inner">
                 <a href="<?php the_permalink(); ?>">
                 <div class="content-overlay"></div>
                      <img src="<?php echo the_sub_field('image'); ?>"> 
@@ -96,14 +65,9 @@ while(have_rows('module')) {
             </div>
         </div>
     </div>
-		
+            
+            
             </div>
-			
-
-
-
-
-
-</div><!-- #page-wrapper -->
-
-<?php get_footer();
+        </div>
+    </div>
+</section>

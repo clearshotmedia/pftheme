@@ -1,6 +1,8 @@
 
 .gallery {
-        min-height:100vh;
+        min-height:40vh;
+        max-height:110vh;
+        overflow:hidden;
 .filter-group {
     text-align:center;
     padding: 20px 0;
@@ -22,7 +24,9 @@
     height:auto;
     margin-bottom:15px;
     
-   
+      &.five {
+        width: 19% !important;
+      }
     color: #262524;
     img {
         width:100%;
@@ -36,7 +40,7 @@
     overflow: hidden;
 
     .content-overlay {
-        background: rgba(0,0,0,0.7);
+        background: rgba(227,6,19,0.6);
         position: absolute;
         height: 99%;
         width: 100%;

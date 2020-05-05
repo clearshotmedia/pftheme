@@ -72,7 +72,7 @@
     }
 
     .phone-section {
-        padding:1rem;
+        padding:1rem 5px;
         @media screen and (max-width:$screen-md-max) {
             position:absolute;
             padding:3px 1rem 0 1rem;
@@ -80,6 +80,14 @@
         }
         .phone-inner {
 
+        }
+    }
+    .socials {
+        min-width:63px;
+        position: absolute;
+        right:0;
+        img {
+            display: inline-block;
         }
     }
     .ffgg{

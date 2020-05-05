@@ -2,8 +2,17 @@
 
     .section-inner {
         background: $light;
+        display:table;
+       
         .inner {
             padding:2rem;
+
+            &.vertical-center {
+              display:table-cell;
+              vertical-align:middle;
+              text-align:center;
+            }
+            
         }
       
         height:100%;
@@ -12,4 +21,76 @@
             height:auto;
         }
     }
+
+    .button-inner {
+        position: relative;
+        margin: auto;
+        overflow: hidden;
+
+        .content-overlay {
+            background: rgba(227,6,19,0.6);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+
+            
+        }
+    }
+
+    .button-inner:hover .content-overlay{
+        opacity: 1;
+      }
+      .content-image{
+        max-height: 330px;
+         width: 100%;
+
+      }
+      .content-details {
+        position: absolute;
+        text-align: center;
+       // padding-left: 1em;
+       // padding-right: 1em;
+       padding:1rem 0;
+        width: 100%;
+        color:$white;
+        top: 80%;
+        left: 50%;
+       opacity: 0;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        -moz-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+        p {
+          color:$white;
+          font-size:rem(13);
+          font-weight:600;
+        }
+      }
+      .button-inner:hover .content-details{
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+        background:unset;
+      }
+      
+      .fadeIn-top{
+        top:20%;
+        
+      } 
+
+}
+
+div#inner_image_slider {
+    max-height: 400px;
+    overflow: hidden;
 }

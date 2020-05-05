@@ -78,12 +78,11 @@ defined( 'ABSPATH' ) || exit;
 </div>
 <div class="phone-section">
 				<div class="phone-inner">
-				<a href="tel:<?php echo the_field('header_phone_number', 'option'); ?>">
-				<i class="fa fa-phone"></i></a>
+				<a href="tel:<?php echo the_field('header_phone_number', 'option'); ?>"><img src="/wp-content/uploads/2020/05/phone.png"></a>
 				</div>
 </div>
-			
-
+				<div class="socials"><a href="<?php echo the_field('facebook', 'option'); ?>"><img src="/wp-content/uploads/2020/05/facebook.png"></a>
+<a href="<?php echo the_field('instagram', 'option'); ?>"><img src="/wp-content/uploads/2020/05/instagram.png"></a> </div>
 			</div><!-- .container -->
 			
 
