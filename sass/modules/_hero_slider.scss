@@ -1,0 +1,24 @@
+section#hero_slider {
+    padding:0;
+    color: $white;
+    div#fw_image_slider {
+        height:80vh;
+        .carousel-inner {
+            height:100%;
+            .carousel-item {
+                height:100%;
+                .abs-overlay {
+                    margin-top:5%;
+                        img {
+                            z-index: 999;
+                        }
+                }
+                img {
+                    position:absolute;
+                    top:0;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}

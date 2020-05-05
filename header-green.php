@@ -64,7 +64,8 @@ $container = get_theme_mod( 'pf_container_type' );
 				<i class="fa fa-phone"></i></a>
 				</div>
 </div>
-<a href="<?php echo the_field('instagram', 'option'); ?>"><i class="fa fa-instagram"></i></a>	<a href="<?php echo the_field('facebook', 'option'); ?>"><i class="fa fa-facebook-f"></i></a>
+<div class="socials"><a href="<?php echo the_field('facebook', 'option'); ?>"><img src="/wp-content/uploads/2020/05/facebook.png"></a>
+<a href="<?php echo the_field('instagram', 'option'); ?>"><img src="/wp-content/uploads/2020/05/instagram.png"></a> </div>
 				
 			</div><!-- .container -->
 			

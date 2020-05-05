@@ -35,7 +35,15 @@ while(have_rows('left_side')) {
            		</div>
 				   <div class="col-md-6">
                    <div class="section-inner">
-                   <?php echo $right; ?>
+                   <?php
+
+while(have_rows('right_side_left_side')) {
+	the_row();
+
+	pf_theme_partial('/modules/'.get_row_layout().'.php');
+}
+
+?>
         </div>
            		</div>
 				  
