@@ -5,15 +5,17 @@ section#hero_slider {
     div#fw_image_slider {
         height:80vh;
         .carousel-inner {
+
+            .abs-overlay {
+                margin-top:5%;
+                    img {
+                        z-index: 999;
+                    }
+            }
             height:100%;
             .carousel-item {
                 height:100%;
-                .abs-overlay {
-                    margin-top:5%;
-                        img {
-                            z-index: 999;
-                        }
-                }
+                
                 img {
                     position:absolute;
                     top:0;

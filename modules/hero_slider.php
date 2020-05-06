@@ -12,7 +12,16 @@ $slides = get_sub_field('slides');
     $z = 0;
     while ( have_rows('slides') ) : the_row();?>
     <div class="carousel-item <?php if ($z==0) { echo 'active';} ?>">
-    <div class="abs-overlay">
+   
+        <img class="d-block w-100" src="<?php the_sub_field('background_image');?>">
+
+       
+        </div>
+    <?php 
+    $z++;
+    endwhile; ?>
+
+<div class="abs-overlay">
                 <div class="container">
                     <div class="row">
                     <div class="col-md-7">
@@ -24,15 +33,6 @@ $slides = get_sub_field('slides');
                     </div>
                 </div>
         </div>
-        <img class="d-block w-100" src="<?php the_sub_field('background_image');?>">
-
-       
-        </div>
-    <?php 
-    $z++;
-    endwhile; ?>
-
-
     </div>
     </div>
 </section>
