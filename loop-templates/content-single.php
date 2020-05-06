@@ -29,10 +29,16 @@ $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
 
 	<div class="container">
 		<div class="row">
-			<div class="col-12">
+			<div class="col-md-8">
 			<div class="content-wrapper">
 		<?php the_content(); ?>
 				</div>
+			</div>
+
+			<div class="col-md-4 my-4">
+			<div class="form-inner">
+			 <?php echo the_field('post_contact_form');?>
+			 </div>
 			</div>
 		</div>
 		</div>

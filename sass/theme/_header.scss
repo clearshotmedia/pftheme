@@ -57,9 +57,21 @@
     }
 	&.header-green {
         background: $secondary !important;
-        
+        color: $dark !important;
+         .menu-nav a.nav-link{
+            color: $dark !important;
+        }
+        .tagline {
+            color: $dark !important;
+        }
+        i {
+            color: $dark !important;
+        }
+
+
             .navbar .ffgg #main-menu li ul li {
                 background: $secondary !important;
+                color:$dark;
             }
         
     }
