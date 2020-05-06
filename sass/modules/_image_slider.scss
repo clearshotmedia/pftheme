@@ -11,18 +11,29 @@ section#full_width_image_slider {
             display:flex;
             &.thin {
                     max-height:30vh;
+                    height:30vh;
             }
             &.medium {
                 max-height:55vh;
+                height:55vh;
         }
         &.large {
             max-height:80vh;
+            height:80vh;
     }
 
     .middle {
         display: flex;
 flex-direction: column;
 justify-content: center;
+    }
+
+
+    .carousel-item {
+        img {
+            position:absolute;
+            bottom:0;
+        }
     }
         }
     }

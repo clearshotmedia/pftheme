@@ -6,7 +6,7 @@ $left = get_sub_field('left_side');
 $right = get_sub_field('right_side_slides');
 ?>
 
-<section id="4_8_section" class="section-layout">
+<section id="4_8_section" class="section-layout" style="padding-top:2rem;">
     <div class="container">
 
     <?php if ( $heading ) {?>
