@@ -134,12 +134,12 @@ button {
 	font-style: italic;
 }
 button.alt-button {
-	background:none;
-	border: 2px solid $secondary;
-	color:$secondary;
+	background:$white;
+	border: 2px solid $white;
+	color:$dark;
 	&:hover {
-		background:$secondary;
-		border: 2px solid $secondary;
+		background:$dark;
+		border: 2px solid $dark;
 		color:$white;
 	}
 }

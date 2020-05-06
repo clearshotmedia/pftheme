@@ -91,7 +91,24 @@
 }
 
 div#inner_image_slider {
+
+
     max-height: 400px;
     overflow: hidden;
+  .carousel-inner {
+    max-height:inherit;
+    .carousel-item {
+      max-height:inherit;
+      .carousel-caption {
+        right:2rem;
+        bottom:0;
+        left:unset;
+        text-align:right;
+        h5 {
+          font-weight:500;
+        }
+      }
+    }
+  }
 }
 
