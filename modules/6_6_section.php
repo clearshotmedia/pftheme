@@ -36,7 +36,6 @@ while(have_rows('left_side')) {
 				   <div class="col-md-6">
                    <div class="section-inner">
                    <?php
-
 while(have_rows('right_side_left_side')) {
 	the_row();
 

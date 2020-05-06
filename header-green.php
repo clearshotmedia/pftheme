@@ -36,7 +36,7 @@ $container = get_theme_mod( 'pf_container_type' );
 			<div class="container">
 			
 			<a href="#" class="navbar-brand custom-logo-link">
-					<img src="<?php the_field('green_header_logo', 'option'); ?>" class="img-fluid"></a>
+					<img src="<?php the_field('green_header_logo', 'option'); ?>" class="img-fluid"></a><div class="tagline"><?php echo the_field('tagline', 'option');  ?></div>
 			
 			
 

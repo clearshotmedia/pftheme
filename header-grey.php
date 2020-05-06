@@ -36,7 +36,7 @@ $container = get_theme_mod( 'pf_container_type' );
 			<div class="container">
 	
 			<a href="#" class="navbar-brand custom-logo-link">
-					<img src="<?php the_field('grey_header_logo', 'option'); ?>" class="img-fluid"></a>
+					<img src="<?php the_field('grey_header_logo', 'option'); ?>" class="img-fluid"></a><div class="tagline"><?php echo the_field('tagline', 'option');  ?></div>
 			
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'projectfloors' ); ?>">

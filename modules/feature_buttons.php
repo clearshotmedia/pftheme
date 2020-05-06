@@ -9,6 +9,8 @@ $button = get_sub_field('button');
 
 <section id="feature_buttons">
     <div class="container">
+
+    <?php if ($heading) {?>
     <div class="row">
             <div class="col-12 align-center">
             <h2><?php echo $heading; ?></h2>
@@ -16,6 +18,7 @@ $button = get_sub_field('button');
             </div>
             
         </div>
+    <?php } ?>
         <div class="row no-gutters">
           
             <?php while ( have_rows('button') ) : the_row();?>

@@ -7160,10 +7160,10 @@ jQuery(document).ready(function ($) {
   var $grid = $('.grid').imagesLoaded(function () {
     $grid.isotope({
       itemSelector: '.gallery-item',
-      layoutMode: 'masonry',
+      //  layoutMode: 'masonry',
       masonry: {
-        columnWidth: 10,
-        gutter: 10
+        columnWidth: 1 // gutter: 0
+
       },
       getSortData: {
         name: '.name',

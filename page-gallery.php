@@ -24,6 +24,8 @@ if($headertype == 'green'){
 
 
 ?>
+
+
 			<?php
 
 while(have_rows('module')) {
@@ -34,6 +36,9 @@ while(have_rows('module')) {
 
 ?>
 <div class="wrapper gallery" id="page-wrapper">
+
+
+
 <div class="container">
     <div class="row">
     <div class="col-12">
@@ -47,7 +52,7 @@ while(have_rows('module')) {
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row my-3">
     <div class="col-md-6 offset-md-3">
             <?php while ( have_posts() ) : the_post(); ?>
               <?php echo the_content(); ?>

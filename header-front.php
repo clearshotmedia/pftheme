@@ -36,7 +36,7 @@ defined( 'ABSPATH' ) || exit;
 			<div class="container">
 	
 
-
+			<div class="tagline"><?php echo the_field('tagline', 'option');  ?></div>
 					<?php if ( ! has_custom_logo() ) { ?>
 
 						<?php if ( is_front_page() && is_home() ) : ?>
