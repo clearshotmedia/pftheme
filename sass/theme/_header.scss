@@ -67,6 +67,9 @@
         i {
             color: $dark !important;
         }
+        #main-menu .menu-item-has-children:hover ul li a {
+            color: $dark;
+        }
 
 
             .navbar .ffgg #main-menu li ul li {
