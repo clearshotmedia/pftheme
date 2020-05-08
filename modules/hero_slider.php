@@ -13,7 +13,7 @@ $slides = get_sub_field('slides');
     while ( have_rows('slides') ) : the_row();?>
     <div class="carousel-item <?php if ($z==0) { echo 'active';} ?>">
    
-        <img class="d-block w-100" src="<?php the_sub_field('background_image');?>">
+        <img class="d-block " src="<?php the_sub_field('background_image');?>">
 
        
         </div>

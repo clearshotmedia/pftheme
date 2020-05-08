@@ -21,56 +21,50 @@ $container = get_theme_mod( 'pf_container_type' );
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body  <?php body_class(); ?>>	
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
 
-	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar" class="header grey sticky-top " itemscope itemtype="http://schema.org/WebSite">
-
-		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'tdcc' ); ?></a>
-
-		<nav class="navbar  navbar-expand-md ">
-
-		
-			<div class="container">
-	
-			<a href="#" class="navbar-brand custom-logo-link">
-					<img src="<?php the_field('grey_header_logo', 'option'); ?>" class="img-fluid"></a><div class="tagline"><?php echo the_field('tagline', 'option');  ?></div>
-			
-
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'projectfloors' ); ?>">
-				<i class="fa fa-bars"></i>
-				</button>
-
-						<div class="ffgg">
-				<?php wp_nav_menu(
+<!-- ******************* The Navbar Area ******************* -->
+	<div class="navigation-wrap header-grey start-header ">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<nav class="navbar navbar-expand-md ">
+					
+					<a href="#" class="navbar-brand custom-logo-link">
+					<img src="<?php the_field('grey_header_logo', 'option'); ?>" class="img-fluid"></a>	<div class="tagline"><?php echo the_field('tagline', 'option');  ?></div>
+						
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						
+						<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
 						'container_class' => 'collapse navbar-collapse',
-						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'menu-nav navbar-nav',
+						'container_id'    => 'navbarSupportedContent',
+						'menu_class'      => 'navbar-nav ml-auto py-4 py-md-0',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
 						'depth'           => 2,
 						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
-</div>
-<div class="phone-section">
-				<div class="phone-inner">
-				<a href="tel:<?php echo the_field('header_phone_number', 'option'); ?>">
-				<i class="fa fa-phone"></i></a>
-				</div>
-</div>
 
-<div class="socials"><a href="<?php echo the_field('facebook', 'option'); ?>"><img src="/wp-content/uploads/2020/05/facebook.png"></a>
+
+						
+
+						<div class="socials"><a href="<?php echo the_field('facebook', 'option'); ?>"><img src="/wp-content/uploads/2020/05/facebook.png"></a>
 <a href="<?php echo the_field('instagram', 'option'); ?>"><img src="/wp-content/uploads/2020/05/instagram.png"></a> </div>
+						
+					</nav>		
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+  
 
-			</div><!-- .container -->
-			
-
-
-		</nav><!-- .site-navigation -->
-
-	</div><!-- #wrapper-navbar end -->
+</body>

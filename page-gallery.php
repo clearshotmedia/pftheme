@@ -42,7 +42,7 @@ while(have_rows('module')) {
 <div class="container">
     <div class="row">
     <div class="col-12">
-    <div id="filters" class="filter-group">  <button class="filter is-checked" data-filter="*">All Projects</button>
+    <div id="filters" class="filter-group"> <div class="filterby">Filter By</div> <button class="filter is-checked" data-filter="*">All Projects</button>
             <button class="filter" data-filter=".residential">Residential</button>
             <button class="filter" data-filter=".commerical">Commercial Projects</button>
             <button class="filter" data-filter=".community">Community Living</button>

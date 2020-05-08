@@ -29,7 +29,7 @@ defined( 'ABSPATH' ) || exit;
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'tdcc' ); ?></a>
 
-		<nav class="navbar frontnav  navbar-expand-md ">
+		<nav class="navbar frontnav  navbar-expand-sm ">
 
 		
 			<div class="container">

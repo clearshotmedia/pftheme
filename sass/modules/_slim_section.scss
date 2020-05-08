@@ -13,9 +13,13 @@
     h5 {
        padding: .25em 0em;
        display:inline-block;
+      
     }
     button {
         margin-left:4rem;
+        @media screen and (max-width:$screen-md-max) {
+            margin-left:unset;
+        }
     }
     
 }

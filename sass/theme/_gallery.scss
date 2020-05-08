@@ -6,12 +6,30 @@
 .filter-group {
     text-align:center;
     padding: 20px 0;
+    @media screen and (max-width:$screen-md-max) {
+      padding: 0;
+    }
     button {
         color:$red;
         text-transform:unset;
         padding: 2px 20px;
         font-size: rem(14);
+        @media screen and (max-width:$screen-md-max) {
+          padding: 0;
+          width: 50%;
+          float: left;
+        //  text-align: left;
+          margin: 6px 0;
+        }
     }
+    .filterby {
+      display:none;
+      font-weight: 700;
+      padding: 10px 0;
+      @media screen and (max-width:$screen-md-max) {
+        display:block;
+      }
+  }
 }
 
 .grid {
@@ -31,6 +49,12 @@
     color: #262524;
     img {
         width:100%;
+    }
+
+    @media screen and (max-width:$screen-md-max) {
+      width: 49%;
+      padding:0 2px;
+      margin-bottom:5px;
     }
 }
 }

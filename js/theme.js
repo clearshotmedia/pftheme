@@ -7176,6 +7176,16 @@ jQuery(document).ready(function ($) {
         }
       }
     });
+  });
+  var header = $(".start-header");
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 10) {
+      header.removeClass('start-style').addClass("scroll-on");
+    } else {
+      header.removeClass("scroll-on").addClass('start-style');
+    }
   }); // filter functions
 
   var filterFns = {
