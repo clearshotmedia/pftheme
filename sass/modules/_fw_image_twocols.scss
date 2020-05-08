@@ -4,4 +4,11 @@
     h1 {
         text-shadow: 3px 3px 3px #4e4e4e;
     }
+
+    .wpcf7 {
+        @media screen and (max-width:$screen-sm-max) {
+            display: none;
+        }
+        
+    }
 }

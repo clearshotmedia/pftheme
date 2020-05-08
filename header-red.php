@@ -32,7 +32,7 @@ $container = get_theme_mod( 'pf_container_type' );
 				<div class="col-12">
 					<nav class="navbar navbar-expand-md ">
 					
-					<a href="#" class="navbar-brand custom-logo-link">
+					<a href="<?php echo home_url(); ?>" class="navbar-brand custom-logo-link">
 					<img src="<?php the_field('red_header_logo', 'option'); ?>" class="img-fluid"></a>	<div class="tagline"><?php echo the_field('tagline', 'option');  ?></div>
 						
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,7 +55,7 @@ $container = get_theme_mod( 'pf_container_type' );
 
 						
 
-						<div class="socials"><a href="<?php echo the_field('facebook', 'option'); ?>"><img src="/wp-content/uploads/2020/05/facebook.png"></a>
+<div class="socials ml-md-4"><a href="<?php echo the_field('header_phone_number', 'option'); ?>"><img src="/wp-content/uploads/2020/05/phone.png"><a href="<?php echo the_field('facebook', 'option'); ?>"><img src="/wp-content/uploads/2020/05/facebook.png"></a>
 <a href="<?php echo the_field('instagram', 'option'); ?>"><img src="/wp-content/uploads/2020/05/instagram.png"></a> </div>
 						
 					</nav>		

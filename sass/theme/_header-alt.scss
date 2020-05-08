@@ -111,6 +111,12 @@
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
+.navbar-collapse {
+	@media screen and (max-width:$screen-sm-max) {
+		border-top: 1px solid #ffffff7a;
+	}
+	
+}
 .navbar-nav {
     .nav-link{
 		color: $white;
@@ -118,14 +124,17 @@
         padding: 15px 0 ;
         display: inline-block;
         
-        transition: all 200ms linear;
+		transition: all 200ms linear;
+		@media screen and (max-width:$screen-sm-max) {
+			padding: 3px 0 ;
+		}
     }
     .nav-item:hover .nav-link{
-        color: $dark ;
+		font-weight: 600;
     }
     
     .nav-item.active .nav-link{
-        color: $dark;
+        font-weight: 600;
     }
    
     .nav-item:hover:after{

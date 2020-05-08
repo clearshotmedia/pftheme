@@ -40,3 +40,12 @@ justify-content: center;
     }
     
 }
+
+#fw_image_slider {
+    .wpcf7 {
+        @media screen and (max-width:$screen-sm-max) {
+            display: none;
+        }
+        
+    }
+}

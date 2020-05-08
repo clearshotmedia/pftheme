@@ -10,6 +10,7 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+$container = get_theme_mod( 'pf_container_type' );
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -20,74 +21,50 @@ defined( 'ABSPATH' ) || exit;
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body  <?php body_class(); ?>>	
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
 
-	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar" class="header-red sticky-top " itemscope itemtype="http://schema.org/WebSite">
-
-		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'tdcc' ); ?></a>
-
-		<nav class="navbar frontnav  navbar-expand-sm ">
-
-		
-			<div class="container">
-	
-
-
-					<?php if ( ! has_custom_logo() ) { ?>
-
-						<?php if ( is_front_page() && is_home() ) : ?>
-
-							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
-
-						<?php else : ?>
-
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
-
-						<?php endif; ?>
-
-
-					<?php } else {
-
-						 if ( !is_front_page() ) {
-						the_custom_logo();
-						 }
-					} ?><!-- end custom logo -->
-<div class="tagline"><?php echo the_field('tagline', 'option');  ?></div>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'projectfloors' ); ?>">
+<!-- ******************* The Navbar Area ******************* -->
+	<div class="navigation-wrap header-front start-header ">
+		<div class="container-fluid px-3">
+			<div class="row">
+				<div class="col-12">
+					<nav class="navbar navbar-expand-md ">
 					
-					<i class="fa fa-bars"></i>
-				</button>
-
-						<div class="ffgg">
-				<?php wp_nav_menu(
+					<a href="<?php echo home_url(); ?>" class="navbar-brand custom-logo-link">
+					<img src="<?php the_field('red_header_logo', 'option'); ?>" class="img-fluid"></a>	<div class="tagline"><?php echo the_field('tagline', 'option');  ?></div>
+						
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						
+						<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
 						'container_class' => 'collapse navbar-collapse',
-						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'menu-nav navbar-nav',
+						'container_id'    => 'navbarSupportedContent',
+						'menu_class'      => 'navbar-nav ml-auto py-4 py-md-0',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
 						'depth'           => 2,
 						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
-</div>
-<div class="phone-section">
-				<div class="phone-inner">
-				<a href="tel:<?php echo the_field('header_phone_number', 'option'); ?>">
-				<i class="fa fa-phone"></i></a>
-				</div>
-</div>
-			
-<div class="socials"><a href="<?php echo the_field('facebook', 'option'); ?>"><img src="/wp-content/uploads/2020/05/facebook.png"></a>
+
+
+						
+
+						<div class="socials ml-md-4"><a href="<?php echo the_field('header_phone_number', 'option'); ?>"><img src="/wp-content/uploads/2020/05/phone.png"><a href="<?php echo the_field('facebook', 'option'); ?>"><img src="/wp-content/uploads/2020/05/facebook.png"></a>
 <a href="<?php echo the_field('instagram', 'option'); ?>"><img src="/wp-content/uploads/2020/05/instagram.png"></a> </div>
-			</div><!-- .container -->
-			
+						
+					</nav>		
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+  
 
-
-		</nav><!-- .site-navigation -->
-
-	</div><!-- #wrapper-navbar end -->
+</body>
