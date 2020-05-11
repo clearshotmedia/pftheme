@@ -22,6 +22,9 @@
           margin: 6px 0;
         }
     }
+    button.module {
+      width:33%;
+    }
     .filterby {
       display:none;
       font-weight: 700;
@@ -45,6 +48,9 @@
     
       &.five {
         width: 20% !important;
+        @media screen and (max-width:$screen-md-max) {
+          width: 50% !important;
+        }
       }
     color: #262524;
     img {

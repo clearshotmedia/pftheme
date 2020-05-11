@@ -18,25 +18,16 @@ $heading = get_sub_field('gallery_heading');
     <div id="filters" class="filter-group">
 <?php while ( have_rows('links') ) : the_row(); 
 $link = get_sub_field('link');
-
 $link_url = $link['url'];
     $link_title = $link['title'];
 ?>
-      <a href="<?php echo esc_url( $link_url ); ?>"><button class="filter"><?php echo esc_html( $link_title ); ?></button></a>
-            
-            
-    <?php
-
- 
-
-   endwhile;
-    ?> 
+      <a href="<?php echo esc_url( $link_url ); ?>"><button class="filter module"><?php echo esc_html( $link_title ); ?></button></a>
+      
+    <?php endwhile; ?> 
     </div>
         </div>
     </div>
-    <?php
-    endif;
-    ?>
+    <?php  endif;  ?>
 
 </div>
     <div class=""container-fluid">
