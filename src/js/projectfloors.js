@@ -57,7 +57,13 @@ $(window).scroll(function() {
   });
   
   
-  
+  $('.navbar-nav .dropdown  a').click(function() {
+    if (!$(this).hasClass("parent-clicked")) {
+       $(this).addClass("parent-clicked");
+     } else {
+       location.href = this.href;
+     }
+   });
   // change is-checked class on buttons
   $('.filter-group').each( function( i, buttonGroup ) {
     var $buttonGroup = $( buttonGroup );

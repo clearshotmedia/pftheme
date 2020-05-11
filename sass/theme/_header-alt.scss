@@ -19,6 +19,15 @@
 			transition : all 0.3s ease-out;
 		}
 	}
+
+	.socials {
+		a {
+			img {
+				max-width: 19px;
+				height:auto;
+			}
+		}
+	}
 }
 
 .header-front {
@@ -65,8 +74,10 @@
 	transition : all 0.3s ease-out;
 }
 .tagline {
-    color:$white;
+	color:$white;
+	font-size: rem(15);
 }
+
 .navbar-toggler {
 	float: right;
 	border: none;
@@ -117,12 +128,16 @@
 	}
 	
 }
+
+
 .navbar-nav {
     .nav-link{
 		color: $white;
 		position: relative;
-        padding: 15px 0 ;
-        display: inline-block;
+		padding: 15px 0 ;
+		font-size:rem(15);
+		display: inline-block;
+		font-weight:300;
         
 		transition: all 200ms linear;
 		@media screen and (max-width:$screen-sm-max) {
@@ -223,11 +238,13 @@
 
 /* #Media
 ================================================== */
-
-@media (max-width: 767px) { 
+@media screen and (max-width:$screen-md-max) {
 	.socials {
         display:none;
     }
+}
+@media screen and (max-width:$screen-sm-max){ 
+	
 	.nav-item:after{
 		display: none;
 	}

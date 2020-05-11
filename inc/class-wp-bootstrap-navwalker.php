@@ -146,7 +146,7 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			// Add some additional default classes to the item.
 			$classes[] = 'menu-item-' . $item->ID;
 			$classes[] = 'nav-item';
-			$classes[] = 'pl-4 pl-md-0 ml-0 ml-md-4';
+			$classes[] = 'pl-4 pl-md-0 ml-0 ml-xl-4';
 
 			// Allow filtering the classes.
 			$classes = apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth );
@@ -192,7 +192,7 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			// If item has_children add atts to <a>.
 			if ( isset( $args->has_children ) && $args->has_children && 0 === $depth && 1 !== $args->depth ) {
 				$atts['href']          = ! empty( $item->url ) ? $item->url : '#';
-				$atts['data-toggle']   = 'dropdown';
+				//$atts['data-toggle']   = 'dropdown';
 				$atts['aria-haspopup'] = 'true';
 				$atts['aria-expanded'] = 'false';
 				$atts['class']         = 'dropdown-toggle nav-link';
