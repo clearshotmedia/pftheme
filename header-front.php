@@ -54,7 +54,7 @@ $container = get_theme_mod( 'pf_container_type' );
 
 						
 
-						<div class="socials"><a href="<?php echo the_field('facebook', 'option'); ?>"><img src="/wp-content/uploads/2020/05/facebook.png"></a>
+						<div class="socials"><a href="<?php echo the_field('header_phone_number', 'option'); ?>"><img src="/wp-content/uploads/2020/05/phone-dark.png"></a><a href="<?php echo the_field('facebook', 'option'); ?>"><img src="/wp-content/uploads/2020/05/facebook.png"></a>
 <a href="<?php echo the_field('instagram', 'option'); ?>"><img src="/wp-content/uploads/2020/05/instagram.png"></a> </div>
 						
 					</nav>		
