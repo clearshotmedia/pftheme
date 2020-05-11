@@ -1,0 +1,11 @@
+{
+    "highlight-matching-tag.highlightFromContent": true,
+    "highlight-matching-tag.enabled" :true,
+    "highlight-matching-tag.styles": {
+        "opening": {
+          "name": {
+            "underline": "red"
+          }
+        }
+      }
+}

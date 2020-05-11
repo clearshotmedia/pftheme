@@ -21,6 +21,21 @@ $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
 		<?php the_title( '<h1 class="entry-title align-middle">', '</h1>' ); ?>
 			</div>
 		</div>
+
+		<div class="post-nav">
+			<div class="prev">
+			<?php $next_post = get_previous_post();
+if ( is_a( $next_post , 'WP_Post' ) ) : ?>
+   <a href="<?php echo get_permalink( $next_post->ID ); ?>"><i class="fa fa-angle-left"></i> <?php echo get_the_title( $next_post->ID ); ?></a>
+<?php endif; ?>
+			</div>
+			<div class="next">
+			<?php $next_post = get_next_post();
+if ( is_a( $next_post , 'WP_Post' ) ) : ?>
+    <a href="<?php echo get_permalink( $next_post->ID ); ?>"><?php echo get_the_title( $next_post->ID ); ?> <i class="fa fa-angle-right"></i></a>
+<?php endif; ?>
+			</div>
+			</div>
 		</div>
 		</div>
 	</header><!-- .entry-header -->

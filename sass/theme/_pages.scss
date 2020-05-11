@@ -9,10 +9,36 @@
                 display:table-cell;
                 text-transform: uppercase;
                 color:$white;
+                text-shadow: 3px 3px 3px #4e4e4e;
         }
         }
+
+
+        .post-nav {
+            padding:10px 0;
+            a {
+                color:$white;
+                @media screen and (max-width:$screen-sm-max) {
+                padding: 0 8px;
+                font-size: 14px;
+                }
+                i {
+                    font-size:17px !important;
+                }
+            }
+            
+            width:100%;
+            .next {
+                    float:right;
+            }
+            .prev {
+                    float:left;
+            }
+        }
+        
     
 }
 .content-wrapper {
     padding:2rem 0;
 }
+
