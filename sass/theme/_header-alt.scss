@@ -83,7 +83,7 @@
 	border: none;
 	padding-right: 0;
 
-	&:active, &:focus {
+	&:active, &:focus, &:hover {
     outline: none;
     background:none;
     border:none;
@@ -225,7 +225,10 @@
 	padding: 3px 15px;
 	color: $dark;
 	
-    transition: all 200ms linear;
+	transition: all 200ms linear;
+	@media screen and (max-width:$screen-sm-max){
+		color:$white;
+	}
 }
 .dropdown-item:hover, 
 .dropdown-item:focus {
