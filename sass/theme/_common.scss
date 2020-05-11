@@ -233,6 +233,9 @@ h6, .h6 {
 }
 #page-wrapper {
 	margin-top: 29px;
+	@media screen and (max-width:$screen-sm-max) {
+		margin-top: 60px;
+	}
 }
 p {
 	//margin:0px;
