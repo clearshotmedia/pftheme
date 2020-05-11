@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 
 ?>
 
-
+<div class="front-page content">
 	<?php
 
 while(have_rows('module')) {
@@ -21,5 +21,5 @@ while(have_rows('module')) {
 }
 
 ?>
-
+</div>
 <?php get_footer(); ?>
