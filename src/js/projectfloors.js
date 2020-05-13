@@ -56,6 +56,14 @@ $(window).scroll(function() {
     $grid.isotope({ filter: filterValue });
   });
   
+
+  // Light box
+  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+});
+
+// end lightbox
   
   $('.navbar-nav .dropdown  a').click(function() {
     if (!$(this).hasClass("parent-clicked")) {

@@ -70,12 +70,15 @@ if ( is_a( $next_post , 'WP_Post' ) ) : ?>
                     <div class="grid">
             <?php while ( have_rows('post_gallery') ) : the_row(); ?>
             
-                <div class="gallery-item "> <div class="button-inner">
+                <div class="gallery-item "> 
               
-                <div class="content-overlay"></div>
-                     <img src="<?php echo the_sub_field('image'); ?>"> 
+					<a href="<?php echo the_sub_field('image'); ?>" data-gallery="post-gallery"
+ data-toggle="lightbox">
+					<img src="<?php echo the_sub_field('image'); ?>"> 
+					</a>
+                    
                  
-               </div>
+              
             </div>
             <?php
                 endwhile;

@@ -7208,6 +7208,19 @@ jQuery(document).ready(function ($) {
     $grid.isotope({
       filter: filterValue
     });
+  }); // Light box
+
+  $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+  }); // end lightbox
+
+  $('.navbar-nav .dropdown  a').click(function () {
+    if (!$(this).hasClass("parent-clicked")) {
+      $(this).addClass("parent-clicked");
+    } else {
+      location.href = this.href;
+    }
   }); // change is-checked class on buttons
 
   $('.filter-group').each(function (i, buttonGroup) {
