@@ -43,12 +43,21 @@ while(have_rows('module')) {
     <div class="row">
     <div class="col-12">
     <div id="filters" class="filter-group"> <div class="filterby">Filter By</div> <button class="filter is-checked" data-filter="*">All Projects</button>
-            <button class="filter" data-filter=".residential">Residential</button>
-            <button class="filter" data-filter=".commerical">Commercial Projects</button>
-            <button class="filter" data-filter=".community">Community Living</button>
-            <button class="filter" data-filter=".lifestyle">Lifestyle Resort</button>
-            <button class="filter" data-filter=".project">Project Builds</button>
-            <button class="filter" data-filter=".bespoke">Custom/Bespoke Builds</button>
+           
+           
+           <?php 
+           
+           if( have_rows('project_categories', 'option') ):  
+            while ( have_rows('project_categories', 'option') ) : the_row();
+           ?>
+           
+            <button class="filter" data-filter=".<?php echo the_sub_field('category_name'); ?>"><?php echo the_sub_field('category_label'); ?></button>
+           
+
+           <?php
+        endwhile;   
+        endif;
+             ?>
             </div>
         </div>
     </div>
@@ -66,7 +75,7 @@ while(have_rows('module')) {
          
 
 
-            <?php $gall = get_field('gallery_item', 'option'); 
+            <?php 
 			 if( have_rows('gallery_item', 'option') ): ?> 
                 <div class="row">
                     <div class="col-12">
