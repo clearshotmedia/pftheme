@@ -33,7 +33,7 @@ $right = get_sub_field('right_side_slides');
                     $z = 0;
                     while ( have_rows('right_side_slides') ) : the_row();?>
                     <div class="carousel-item <?php if ($z==0) { echo 'active';} ?>">
-                       <a href="<?php the_sub_field('slide_link');?>"> <img class="d-block w-100" src="<?php the_sub_field('slider_image');?>">
+                       <a href="<?php the_sub_field('slide_link');?>"> <img class="d-block w-100" src="<?php the_sub_field('slider_image');?>"></a>
 
                         <div class="carousel-caption d-none d-md-block">
                         <h5 class="slider-text"><?php the_sub_field('slide_text');?></h5>

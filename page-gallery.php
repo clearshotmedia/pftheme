@@ -88,7 +88,7 @@ $categories = get_categories( array(
         </div>
     </div>
     <div class="row my-3">
-    <div class="col-md-6 offset-md-3">
+    <div class="col-md-12 ">
             <?php while ( have_posts() ) : the_post(); ?>
               <?php echo the_content(); ?>
             <?php endwhile; // end of the loop. ?>

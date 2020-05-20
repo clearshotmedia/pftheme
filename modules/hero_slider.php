@@ -11,7 +11,7 @@ $slides = get_sub_field('slides');
         <?php 
     $z = 0;
     while ( have_rows('slides') ) : the_row();?>
-    <div class="carousel-item <?php if ($z==0) { echo 'active';} ?>" style="background:url('<?php the_sub_field('background_image');?>');background-size:cover;">
+    <div class="carousel-item <?php if ($z==0) { echo 'active';} ?>" style="background:url('<?php the_sub_field('background_image');?>');background-size:cover;background-position:bottom;">
    
         
 
