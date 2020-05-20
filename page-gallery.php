@@ -36,7 +36,18 @@ while(have_rows('module')) {
 
 ?>
 <div class="wrapper gallery" id="page-wrapper">
+<?php
+// Get the current queried object
+$term    = get_queried_object();
+$term_id = ( isset( $term->term_id ) ) ? (int) $term->term_id : 0;
 
+$categories = get_categories( array(
+    'taxonomy'   => 'category', // Taxonomy to retrieve terms for. We want 'category'. Note that this parameter is default to 'category', so you can omit it
+    'orderby'    => 'name',
+    'parent'     => 0,
+    'hide_empty' => 0, // change to 1 to hide categores not having a single post
+) );
+?>
 
 
 <div class="container">
@@ -44,20 +55,35 @@ while(have_rows('module')) {
     <div class="col-12">
     <div id="filters" class="filter-group"> <div class="filterby">Filter By</div> <button class="filter is-checked" data-filter="*">All Projects</button>
            
-           
-           <?php 
-           
-           if( have_rows('project_categories', 'option') ):  
-            while ( have_rows('project_categories', 'option') ) : the_row();
-           ?>
-           
-            <button class="filter" data-filter=".<?php echo the_sub_field('category_name'); ?>"><?php echo the_sub_field('category_label'); ?></button>
+
+    
+    <?php
+    foreach ( $categories as $category ) 
+    {
+        $cat_ID        = (int) $category->term_id;
+        $category_name = $category->name;
+
+        // When viewing a particular category, give it an [active] class
+        $cat_class = ( $cat_ID == $term_id ) ? 'active' : 'not-active';
+
+        // I don't like showing the [uncategoirzed] category
+        if ( strtolower( $category_name ) != 'uncategorised' )
+        {
            
 
-           <?php
-        endwhile;   
-        endif;
-             ?>
+
+            ?> 
+               <button class="filter" data-filter=".<?php echo $category->slug; ?>"><?php echo $category->name; ?></button>
+            
+            <?php
+        }
+    }
+    ?>
+
+
+
+           
+       
             </div>
         </div>
     </div>
@@ -86,14 +112,16 @@ while(have_rows('module')) {
                         // override $post
                         $post = $post_object;
                         setup_postdata( $post ); 
+
+                        $cats = get_the_category( $post->ID );
             ?>
-                <div class="gallery-item <?php echo the_sub_field('image_tag'); ?>"> <div class="button-inner">
+                <div class="gallery-item <?php foreach($cats as $cd){ echo $cd->slug; }?>"> <div class="button-inner">
                 <a href="<?php the_permalink(); ?>">
                 <div class="content-overlay"></div>
                      <img src="<?php echo the_sub_field('image'); ?>"> 
                      <div class="content-details fadeIn-top">
 
-        <h5><?php echo $post->post_title; ?></h5>
+        <h5><?php echo $post->post_title;?></h5>
        
       </div> </a>
                </div>

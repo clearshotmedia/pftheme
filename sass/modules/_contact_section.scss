@@ -1,6 +1,11 @@
 #contact_section {
     padding:2rem 0;
 
+
+    .left-inner {
+        background: $light;
+        padding:2rem;
+    }
     img {
         max-width: -webkit-fill-available;
         height: auto;

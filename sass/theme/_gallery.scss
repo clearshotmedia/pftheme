@@ -3,6 +3,10 @@
         min-height:40vh;
         
         overflow:hidden;
+
+        .tagline {
+          color:$dark;
+        }
 .filter-group {
     text-align:center;
     padding: 20px 0;
