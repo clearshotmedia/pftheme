@@ -2,10 +2,10 @@
 $heading = get_sub_field('section_heading');
 $left = get_sub_field('left_side');
 $right = get_sub_field('right_side');
-
+$colour = get_sub_field('background_colour');
 ?>
 
-<section id="contact_section">
+<section id="new_contact"  style="background:<?php echo $colour;?>">
     <div class="container">
     <div class="row">
     <div class="col-12">
