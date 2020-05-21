@@ -5,7 +5,7 @@ $content_left = get_sub_field('content_left');
 $content_right = get_sub_field('content_right');
 ?>
 
-<section id="fw-image-twocols" style="background:url('<?php echo $background; ?>'); background-size:cover;">
+<section id="fw-image-twocols" style="background:url('<?php echo $background; ?>'); background-size:cover;background-position:bottom;">
     <div class="container">
         <div class="row ">
 
