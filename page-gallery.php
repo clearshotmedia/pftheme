@@ -79,11 +79,6 @@ $categories = get_categories( array(
         }
     }
     ?>
-
-
-
-           
-       
             </div>
         </div>
     </div>
@@ -106,6 +101,7 @@ $categories = get_categories( array(
                 <div class="row">
                     <div class="col-12">
                     <div class="grid">
+                    <div class="grid-sizer"></div>
             <?php while ( have_rows('gallery_item', 'option') ) : the_row(); ?>
             <?php $post_object = get_sub_field('post_link'); 
                     if( $post_object ):

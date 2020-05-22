@@ -41,31 +41,32 @@
 
 .grid {
     min-height: max-content !important;
-   
+    .grid-sizer,
+    .gallery-item { width: 20%; }
   .gallery-item {
     position: relative;
     float: left;
-    width: 20%;
     padding:0 10px;
     height:auto;
     margin-bottom:15px;
     
-      &.five {
-        width: 20% !important;
-        @media screen and (max-width:$screen-md-max) {
-          width: 50% !important;
-        }
-      }
+     
     color: #262524;
     img {
         width:100%;
     }
 
-    @media screen and (max-width:$screen-md-max) {
-      width: 49%;
-      padding:0 2px;
-      margin-bottom:5px;
-    }
+   
+}
+
+@media screen and (max-width:$screen-md-max) {
+  .grid-sizer,
+    .gallery-item { width: 49%; }
+  .gallery-item {
+  
+    padding:0 2px;
+    margin-bottom:5px;
+  }
 }
 }
 

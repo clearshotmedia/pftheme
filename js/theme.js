@@ -7162,7 +7162,7 @@ jQuery(document).ready(function ($) {
       itemSelector: '.gallery-item',
       //  layoutMode: 'masonry',
       masonry: {
-        columnWidth: 1 // gutter: 0
+        columnWidth: '.grid-sizer' // gutter: 0
 
       },
       getSortData: {

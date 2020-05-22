@@ -8,7 +8,7 @@ var $grid = $('.grid').imagesLoaded( function() {
     itemSelector: '.gallery-item',
   //  layoutMode: 'masonry',
     masonry: {
-      columnWidth: 1,
+      columnWidth: '.grid-sizer'
      // gutter: 0
     },
     getSortData: {
