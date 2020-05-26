@@ -33,6 +33,15 @@
 .header-front {
 	background-color: $dark;
   //  transition: all 200ms linear;
+
+  .navbar .main-menu li .dropdown-menu  {
+	color: $white;
+	background-color: $dark;
+  }
+  .dropdown-item {
+	color: $white;
+	background-color: $dark;
+  }
 }
 .header-green {
 	background-color: $secondary;
@@ -45,14 +54,33 @@
 	.tagline {
 		color:$dark;
 	}
+	.dropdown-item {
+		color: $dark;
+		background-color: $secondary;
+	  }
+
+	  .navbar .navbar-toggler-icon {
+		border-bottom: 1px solid $dark;
+		&:before, &:after {
+			background-color:$dark;
+		}
+	  }
 }
 .header-red {
 	background-color: $primary;
   //  transition: all 200ms linear;
+    .dropdown-item {
+	color: $white;
+	background-color: $primary;
+  }
 }
 .header-grey {
 	background-color: $grey;
   //  transition: all 200ms linear;
+  .dropdown-item {
+	color: $white;
+	background-color: $grey;
+  }
 }
 .navigation-wrap{
 	position: fixed;
@@ -197,7 +225,8 @@
     transition: all 200ms linear;
 }
 .nav-item:hover .dropdown-menu {
-    opacity: 1;
+	opacity: 1;
+	
     visibility: visible;
 	max-height: 999px;
     transform: translate3d(0, 0px, 0);
@@ -205,10 +234,7 @@
 .dropdown-menu {
 	padding: 10px;
 	margin: 0;
-	font-size: 13px;
-	letter-spacing: 1px;
-	color: $dark;
-	background-color: #fcfaff;
+	
 	border: none;
 	border-radius: 0;
 	box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
@@ -222,9 +248,10 @@
 }
 
 .dropdown-item {
-	padding: 3px 15px;
-	color: $dark;
-	
+	//padding: 3px 15px;
+//	color: $white;
+	//background-color: $dark;
+	font-size:rem(15);
 	transition: all 200ms linear;
 	@media screen and (max-width:$screen-sm-max){
 		color:$white;
@@ -232,8 +259,8 @@
 }
 .dropdown-item:hover, 
 .dropdown-item:focus {
-	color: $white;
-	background-color: rgba(128, 128, 128, 0.6);
+	font-weight:700;
+	
 }
 
 

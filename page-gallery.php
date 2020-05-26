@@ -26,15 +26,7 @@ if($headertype == 'green'){
 ?>
 
 
-			<?php
-
-while(have_rows('module')) {
-	the_row();
-
-	pf_theme_partial('/modules/'.get_row_layout().'.php');
-}
-
-?>
+	
 <div class="wrapper gallery" id="page-wrapper">
 <?php
 // Get the current queried object
@@ -138,7 +130,15 @@ $categories = get_categories( array(
             </div>
 			
 
+            <?php
 
+while(have_rows('module')) {
+	the_row();
+
+	pf_theme_partial('/modules/'.get_row_layout().'.php');
+}
+
+?>
 
 
 
