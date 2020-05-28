@@ -68,6 +68,7 @@ if ( is_a( $next_post , 'WP_Post' ) ) : ?>
                 <div class="row">
                     <div class="col-12">
                     <div class="grid">
+					<div class="grid-sizer"></div>
             <?php while ( have_rows('post_gallery') ) : the_row(); ?>
             
                 <div class="gallery-item "> 

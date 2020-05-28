@@ -74,9 +74,14 @@
     position: relative;
     margin: auto;
     overflow: hidden;
+    transition: all 0.4s ease-in-out 0s;
+    &:hover img {
+      transform: scale(1.1);
+      transition: all 0.4s ease-in-out 0s;
+    }
 
     .content-overlay {
-        background: rgba(227,6,19,0.6);
+       // background: rgba(227,6,19,0.6);
         position: absolute;
         height: 100%;
         width: 100%;
@@ -88,13 +93,15 @@
         -webkit-transition: all 0.4s ease-in-out 0s;
         -moz-transition: all 0.4s ease-in-out 0s;
         transition: all 0.4s ease-in-out 0s;
-
+        
     
     }
 }
 
 .button-inner:hover .content-overlay{
     opacity: 1;
+
+    
   }
   .content-image{
     max-height: 330px;
@@ -122,6 +129,10 @@
       color:$white;
       font-size:rem(13);
       font-weight:600;
+      
+    }
+    h5 {
+      text-shadow: 3px 3px 4px #2b2b2b;
     }
   }
   .button-inner:hover .content-details{

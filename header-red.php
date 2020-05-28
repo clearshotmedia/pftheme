@@ -55,8 +55,8 @@ $container = get_theme_mod( 'pf_container_type' );
 
 						
 
-<div class="socials ml-md-4"><a href="<?php echo the_field('header_phone_number', 'option'); ?>"><img src="/wp-content/uploads/2020/05/phone.png"></a><a href="<?php echo the_field('facebook', 'option'); ?>"><img src="/wp-content/uploads/2020/05/facebook.png"></a>
-<a href="<?php echo the_field('instagram', 'option'); ?>"><img src="/wp-content/uploads/2020/05/instagram.png"></a> </div>
+<div class="socials ml-md-4"><a href="<?php echo the_field('header_phone_number', 'option'); ?>"><img src="http://116.90.51.35/~projec25/wp-content/uploads/2020/05/phone.png"></a><a href="<?php echo the_field('facebook', 'option'); ?>"><img src="http://116.90.51.35/~projec25/wp-content/uploads/2020/05/facebook.png"></a>
+<a href="<?php echo the_field('instagram', 'option'); ?>"><img src="http://116.90.51.35/~projec25/wp-content/uploads/2020/05/instagram.png"></a> </div>
 						
 					</nav>		
 				</div>

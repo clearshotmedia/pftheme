@@ -30,7 +30,7 @@ $link_url = $link['url'];
     <?php  endif;  ?>
 
 </div>
-    <div class=""container-fluid">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12">
             
