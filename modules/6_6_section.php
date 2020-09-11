@@ -19,7 +19,7 @@ $right = get_sub_field('right_side');
     <?php } ?>
         <div class="row ">
 
-            	<div class="col-xl-6">
+            	<div class="col-md-6">
 				<div class="section-inner">
                 <?php
 
@@ -33,7 +33,7 @@ while(have_rows('left_side')) {
 
 				</div>
            		</div>
-				   <div class="col-xl-6">
+				   <div class="col-md-6">
                    <div class="section-inner">
                    <?php
 while(have_rows('right_side_left_side')) {

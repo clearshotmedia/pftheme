@@ -121,7 +121,20 @@ if ( ! function_exists( 'understrap_categorized_blog' ) ) {
 		}
 	}
 }
+add_action ('wp_head','hook_inHeader');
+function hook_inHeader() {
+  ?>  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126957252-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-126957252-1');
+</script>
+<?php
+
+}
 /**
  * Flush out the transients used in understrap_categorized_blog.
  */

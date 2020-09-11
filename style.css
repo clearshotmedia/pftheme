@@ -25,4 +25,12 @@ and of course
 jQuery: https://jquery.org | (Code licensed under MIT)
 WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
 */
-
+#contact_section .left-inner {
+    
+    height: 100%;
+}
+pre {
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow: auto;
+}
